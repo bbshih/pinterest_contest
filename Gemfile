@@ -7,6 +7,7 @@ gem 'rails', '4.0.0.rc1'
 
 gem 'pg'
 gem 'dotenv'
+gem 'unicorn'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
