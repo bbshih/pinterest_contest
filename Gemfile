@@ -19,7 +19,7 @@ gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'simple_form'
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.11'
+  gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'

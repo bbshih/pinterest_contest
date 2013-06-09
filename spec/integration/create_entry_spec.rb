@@ -6,7 +6,7 @@ feature 'Create Entry' do
     fill_in 'Email', with: 'test@test.com'
     fill_in 'Pinterest Username', with: 'Test'
     click_button 'Submit'
-    page.should have_content('You have been entered into the contest!')
+    page.should have_content('You have successfully been entered into the contest!')
   end
 end
 

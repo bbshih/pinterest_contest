@@ -11,5 +11,24 @@
  *= require_self
  *= require_tree .
  */
+
+$linkColor: #FF66CC;
+$btnPrimaryBackgroundHighlight: #FF66CC;
+$borderRadiusLarge: 0px;
+$borderRadiusSmall: 0px;
+
 @import "bootstrap";
 @import "bootstrap-responsive";
+.inline .pinButton > a { 
+  position: absolute !important;
+  top: 115px;
+  left: 80px;
+
+}
+
+.inline .pinButton {
+  position:relative;
+}
+
+
+
