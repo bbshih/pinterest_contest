@@ -11,11 +11,11 @@ gem 'unicorn'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 gem 'devise'
 gem 'cancan', '1.6.7'
 
-gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'simple_form'
 
 group :production do
