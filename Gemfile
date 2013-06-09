@@ -18,6 +18,11 @@ gem 'cancan', '1.6.7'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'simple_form'
 
+group :production do
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+end
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'pry-rails'
