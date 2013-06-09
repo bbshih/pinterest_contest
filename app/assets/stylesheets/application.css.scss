@@ -16,19 +16,23 @@ $linkColor: #FF66CC;
 $btnPrimaryBackgroundHighlight: #FF66CC;
 $borderRadiusLarge: 0px;
 $borderRadiusSmall: 0px;
+$baseFontSize: 16px; 
 
 @import "bootstrap";
 @import "bootstrap-responsive";
-.inline .pinButton > a { 
+
+.inline .pin-button {
+  position:relative;
+  
+a {
   position: absolute !important;
   top: 115px;
   left: 80px;
-
-}
-
-.inline .pinButton {
-  position:relative;
+  }
 }
 
 
 
+.pin-image {
+  width: 200px;
+}
