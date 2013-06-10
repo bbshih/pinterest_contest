@@ -6,7 +6,6 @@ ruby '2.0.0'
 gem 'rails', '4.0.0.rc1'
 
 gem 'pg'
-gem 'dotenv'
 gem 'unicorn'
 
 # Use SCSS for stylesheets
@@ -25,10 +24,12 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
-  
+
+  gem 'dotenv-rails'
   gem 'better_errors'
   gem 'annotate'
   gem 'meta_request'
