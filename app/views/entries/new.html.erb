@@ -1,0 +1,53 @@
+<div class="row-fluid">
+  <div class="span12">
+    <h1>t+j designs Pinterest Contest <br>
+      <small>Enter in 3 steps</small></h1>
+    <h2>Step 1 <small>Follow us</small></h2>
+    <p>Follow @tandjdesigns on pinterest <a data-pin-do="buttonFollow" href="http://pinterest.com/tandjdesigns/">tandjdesigns</a></p>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <h2>Step 2 <small>Pin 3 images</small></h2>
+    <p>Pick your favorite 3 images and pin them</p>
+    <ol class="inline">
+      <li>
+        <div class="pin-button">
+          <img src="<%= image_path("_thumb/image1.jpg") %>" class="img-polaroid">
+          <a href="//pinterest.com/pin/create/button/?url=https://tjdpincontest.herokuapp.com&media=<%= image_url("image1.jpg") %>" data-pin-do="buttonBookmark"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png"/></a>
+        </div>
+      </li>
+      <li>
+        <div class="pin-button">
+          <img src="<%= image_path("_thumb/image2.jpg") %>" class="img-polaroid"><a href="//pinterest.com/pin/create/button/?url=https://tjdpincontest.herokuapp.com&media=<%= image_url("image2.jpg") %>" data-pin-do="buttonBookmark"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png"/></a>
+        </div>
+      </li>
+      <li>
+        <div class="pin-button">
+          <img src="<%= image_path("_thumb/image3.jpg") %>" class="img-polaroid"><a href="//pinterest.com/pin/create/button/?url=https://tjdpincontest.herokuapp.com&media=<%= image_url("image3.jpg") %>" data-pin-do="buttonBookmark"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png"/></a>
+        </div>
+      </li>
+      <li>
+        <div class="pin-button">
+          <img src="<%= image_path("_thumb/image4.jpg") %>" class="img-polaroid"><a href="//pinterest.com/pin/create/button/?url=https://tjdpincontest.herokuapp.com&media=<%= image_url("image4.jpg") %>" data-pin-do="buttonBookmark"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png"/></a>
+        </div>
+      </li>
+      <li>
+        <div class="pin-button">
+          <img src="<%= image_path("_thumb/image5.jpg") %>" class="img-polaroid"><a href="//pinterest.com/pin/create/button/?url=https://tjdpincontest.herokuapp.com&media=<%= image_url("image5.jpg") %>" data-pin-do="buttonBookmark"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png"/></a>
+        </div>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <h2>Step 3 <small>Fill in an entry</small></h2>
+    <p>Tell us who you are so we can contact you when you win!</p>
+      <%= simple_form_for @entry do |f| %>
+        <%= f.input :email %>
+        <%= f.input :username, label: "Pinterest Username" %>
+        <%= f.button :submit, class: "btn btn-large btn-primary" %>
+      <% end %>
+  </div>
+</div>
