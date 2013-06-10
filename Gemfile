@@ -12,7 +12,7 @@ gem 'unicorn'
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 
-gem 'devise'
+gem 'devise', '~> 3.0rc'
 gem 'cancan', '1.6.7'
 
 gem 'simple_form'
@@ -22,15 +22,17 @@ group :production do
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
 
+group :development do
+  gem 'better_errors'
+end
+
 group :test, :development do
   gem 'rspec-rails'
   
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
-
   gem 'dotenv-rails'
-  gem 'better_errors'
   gem 'annotate'
   gem 'meta_request'
 end

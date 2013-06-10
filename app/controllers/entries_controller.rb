@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
   before_filter :authenticate_user!, only: [:index]
-  before_filter :find_entry, only: [:show]
+  before_filter :find_entry, only: [:show, :add_winner]
 
   def index
     @entries = Entry.all
@@ -12,7 +12,6 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.create(entry_params)
-    @entry.winner = false
     if @entry.save
       redirect_to @entry, notice:"You have successfully been entered into the contest!"
     else
@@ -22,6 +21,16 @@ class EntriesController < ApplicationController
   end
 
   def show
+  end
+
+  def add_winner
+    @entry.winner = true
+    if @entry.save
+      redirect_to entries_path, notice:"Winner updated"
+    else
+      flash[:alert] = "Winner not updated"
+      render :action => "index"
+    end
   end
 
 private

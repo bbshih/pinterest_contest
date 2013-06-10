@@ -1,15 +1,34 @@
 <table>
-  <th>
-    <td>Email</td>
-    <td>Username</td>
-    <td>Winner</td>
-  </th>
-<% @entries each do |entry| %>
+  <tr>
+    <th>Email</th>
+    <th>Username</th>
+    <th>Winner</th>
+  </tr>
+<% @entries.each do |entry| %>
   <tr>
     <td><%= entry.email %></td>
     <td><%= entry.username %></td>
-    <td><%= if entry.winner = true %></td>
+    <td>
+      <% if entry.winner == true %>
+        <%= entry.winner%>
+      <% else %>
+
+      <%#= link_to_remote "1", {:url => { :controller => "ratings", :action => :create,  
+                  :rating => {:rateable_type => asset.class.to_s.downcase, :rateable_id => asset.id, :rating => 1}}},
+                  :method => :post, :class => 'one-star', :name => '1 star out of 5' %>
+
+        <%= link_to "Select as Winner", {
+            :url => { :controller => "entries", :action => :add_winner,  
+                      :entry => {:winner => true}}},
+                    :method => :post, :class => 'select_winner' %>
+
+        <%#= link_to "Select as Winner", entry,
+                    :method => :add_winner, 
+                    :remote => true, class: "select_winner" %>
+      <% end %>
+    </td>
   </tr>
 <% end %>
 
 </table>
+
