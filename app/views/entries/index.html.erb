@@ -17,7 +17,7 @@
                   :rating => {:rateable_type => asset.class.to_s.downcase, :rateable_id => asset.id, :rating => 1}}},
                   :method => :post, :class => 'one-star', :name => '1 star out of 5' %>
 
-        <%= link_to "Select as Winner", {
+        <%#= link_to "Select as Winner", {
             :url => { :controller => "entries", :action => :add_winner,  
                       :entry => {:winner => true}}},
                     :method => :post, :class => 'select_winner' %>

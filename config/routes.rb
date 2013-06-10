@@ -3,7 +3,10 @@ PinterestContest::Application.routes.draw do
 
   resources :entries
   
+
   root to: "entries#new"
+
+  get 'user_root' => 'entries#index', as: :user_root
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
