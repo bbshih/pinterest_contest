@@ -1,5 +1,5 @@
 class AddWinnerToEntries < ActiveRecord::Migration
   def change
-    add_column :entries, :winner, :boolean, :default => false
+    add_column :entries, :winner, :boolean
   end
 end
