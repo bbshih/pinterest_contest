@@ -49,7 +49,9 @@
       <%= simple_form_for @entry do |f| %>
         <%= f.input :email %>
         <%= f.input :username, label: "Pinterest Username" %>
+        <p><small>By entering this giveaway you give t+j designs permission to add you to our email list to get news about our sales, promotions and other announcements.</small></p>
         <%= f.button :submit, class: "btn btn-large btn-primary" %>
       <% end %>
+
   </div>
 </div>
